@@ -7,19 +7,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.api.rest.pedido.model.CategoriaModel;
+import com.api.rest.pedido.model.Categoria;
 
 @RestController
 @RequestMapping(value="/categorias")
 public class CategoriaController {
 	
 	@RequestMapping(method=RequestMethod.GET)
-	public List<CategoriaModel> listar() {
+	public List<Categoria> listar() {
 		
-		CategoriaModel cat1 = new CategoriaModel(1, "Informática");
-		CategoriaModel cat2 = new CategoriaModel(2, "Escritório");
+		Categoria cat1 = new Categoria(1, "Informática");
+		Categoria cat2 = new Categoria(2, "Escritório");
 		
-		List<CategoriaModel> lista = new ArrayList<>();
+		List<Categoria> lista = new ArrayList<>();
 		
 		lista.add(cat1);
 		lista.add(cat2);
