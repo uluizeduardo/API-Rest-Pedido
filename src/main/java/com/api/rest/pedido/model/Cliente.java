@@ -30,6 +30,8 @@ public class Cliente implements Serializable{
 	private String cpfOuCnpj;
 	private Integer tipo;
 	
+	private List<Pedido> pedidos = new ArrayList<>();
+	
 	//Associações
 	@OneToMany(mappedBy = "cliente")
 	@JsonManagedReference
@@ -109,6 +111,14 @@ public class Cliente implements Serializable{
 		this.telefones = telefones;
 	}
 	
+	public List<Pedido> getPedidos() {
+		return pedidos;
+	}
+
+	public void setPedidos(List<Pedido> pedidos) {
+		this.pedidos = pedidos;
+	}
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -125,4 +135,5 @@ public class Cliente implements Serializable{
 		Cliente other = (Cliente) obj;
 		return Objects.equals(id, other.id);
 	}
+
 }
