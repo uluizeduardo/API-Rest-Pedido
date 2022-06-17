@@ -3,6 +3,8 @@ package com.api.rest.pedido.model;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import com.api.rest.pedido.enums.EstadoPagamento;
 
@@ -10,7 +12,10 @@ import com.api.rest.pedido.enums.EstadoPagamento;
 public class PagamentoComBoleto extends Pagamento{
 	private static final long serialVersionUID = 1L;
 	
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date dataVencimento;
+	
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date dataPagamento;
 	
 	public PagamentoComBoleto() {
