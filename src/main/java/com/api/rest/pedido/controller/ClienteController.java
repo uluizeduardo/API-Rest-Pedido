@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.api.rest.pedido.dtos.ClienteDTO;
 import com.api.rest.pedido.model.Cliente;
 import com.api.rest.pedido.services.ClienteService;
 
@@ -18,10 +19,9 @@ public class ClienteController {
 	private ClienteService clienteService;
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public ResponseEntity<Cliente> buscarCliente(@PathVariable Integer id) {
+	public ResponseEntity<ClienteDTO> buscarCliente(@PathVariable Integer id) {
 		
-		Cliente cliente = clienteService.buscarCliente(id);
-		
-		return ResponseEntity.ok().body(cliente);
+		ClienteDTO clienteDTO = new ClienteDTO(clienteService.buscarCliente(id));
+		return ResponseEntity.ok().body(clienteDTO);
 	}
 }

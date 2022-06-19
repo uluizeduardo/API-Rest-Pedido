@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.api.rest.pedido.dtos.CategoriaDTO;
 import com.api.rest.pedido.model.Categoria;
 import com.api.rest.pedido.services.CategoriaService;
 
@@ -18,10 +19,9 @@ public class CategoriaController {
 	private CategoriaService categoriaService;
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public ResponseEntity<Categoria> buscarCategoria(@PathVariable Integer id) {
+	public ResponseEntity<CategoriaDTO> buscarCategoria(@PathVariable Integer id) {
 		
-		Categoria categoria = categoriaService.buscarCategoria(id);
-		
-		return ResponseEntity.ok().body(categoria);
+		CategoriaDTO categoriaDTO = new CategoriaDTO(categoriaService.buscarCategoria(id));
+		return ResponseEntity.ok().body(categoriaDTO);
 	}
 }
