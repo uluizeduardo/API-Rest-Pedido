@@ -12,6 +12,7 @@
   src="https://img.shields.io/github/watchers/uluizeduardo/API-Rest-Pedido"
   />
 </p>
+
 # 🚀 Proposta 
 Essa API tem como finalidade trazer dados de um pedido, assim como os dados do cliente conforme os endpoint. 
 
