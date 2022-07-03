@@ -24,7 +24,7 @@ Essa API tem como finalidade trazer dados de um pedido, assim como os dados do c
 |/pedidos/{id}|Pedido, seu cliente, seu pagamento, seus itens de pedido e seu endereço de entrega|
 
 
-A documentação desta API está disponível em: (Em breve)
+A documentação desta API está disponível em: https://documenter.getpostman.com/view/16575194/UzJFvJB3
 # 🛠 Ferramentas utilizadas
 
 - Spring Tools Suite
