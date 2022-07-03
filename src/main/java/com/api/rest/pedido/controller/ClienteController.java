@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.api.rest.pedido.dtos.ClienteDTO;
-import com.api.rest.pedido.model.Cliente;
 import com.api.rest.pedido.services.ClienteService;
 
 @RestController

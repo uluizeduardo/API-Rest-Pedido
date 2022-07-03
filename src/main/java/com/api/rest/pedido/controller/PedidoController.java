@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.api.rest.pedido.dtos.PedidoDTO;
-import com.api.rest.pedido.model.Pedido;
 import com.api.rest.pedido.services.PedidoService;
 
 @Controller
